@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/customer_register', "customer_register");
+Route::view('/customer_login', "customer_login");
+
+Route::post('/register', 'Customer@register');
+Route::post('/login', 'Customer@login');
